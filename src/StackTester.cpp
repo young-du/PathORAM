@@ -20,14 +20,22 @@ void StackTester::runStackTest() {
     Stack myStack(bucketSize, numBlocks);
     cout << "Built a stack\n";
 
-	for (int i = 0; i < 30; i++){
+	for (int i = 0; i < 20; i++){
         cout << "pushed " << i << " and the cache size is " << myStack.getCacheSize() << ".\n";
         myStack.push(i);
 	}
 
-    for (int i = 0; i < 30; i++){
+    for (int i = 0; i < 13; i++){
         int popped = myStack.pop();
         cout << "popped " << popped << " and the cache size is " << myStack.getCacheSize() << ".\n";
 	}
+    for (int i = 0; i < 8; i++){
+        cout << "pushed " << i << " and the cache size is " << myStack.getCacheSize() << ".\n";
+        myStack.push(i);
+	}
 
+    for (int i = 0; i < 15; i++){
+        int popped = myStack.pop();
+        cout << "popped " << popped << " and the cache size is " << myStack.getCacheSize() << ".\n";
+	}
 }
